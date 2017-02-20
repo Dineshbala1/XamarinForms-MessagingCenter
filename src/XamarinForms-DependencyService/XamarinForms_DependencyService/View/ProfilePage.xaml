@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ViewModels="clr-namespace:XamarinForms_DependencyService.ViewModel;asembly=XamarinForms_DependencyService"
+             x:Class="XamarinForms_DependencyService.Page.ProfilePage">
+
+  <ContentPage.BindingContext>
+    <ViewModels:ProfilePageViewModel />
+  </ContentPage.BindingContext>
+
+
+  <StackLayout>
+    <Entry Text="{Binding UserName}" 
+           HeightRequest="50" 
+           WidthRequest="400" 
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" />
+    <Button x:Name="closeButton" 
+            Text="Click to close"/>
+  </StackLayout>
+</ContentPage>

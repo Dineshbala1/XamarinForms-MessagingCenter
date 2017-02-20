@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ViewModels="clr-namespace:XamarinForms_DependencyService.ViewModel;asembly=XamarinForms_DependencyService"
+             x:Class="XamarinForms_DependencyService.HomePage">
+  
+  <ContentPage.BindingContext>
+    <ViewModels:HomePageViewModel />
+  </ContentPage.BindingContext>
+
+  <StackLayout>
+    <Label x:Name="appNameLabel" 
+           HeightRequest="25" 
+           WidthRequest="300"  
+           Text="{Binding HomeModelProp.AppName}" 
+           TextColor="Red"  
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" />
+    <Label x:Name="userNameLabel" 
+           HeightRequest="30" 
+           WidthRequest="300" 
+           Text="{Binding HomeModelProp.UserName,Mode=TwoWay}" 
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" />
+    <Button x:Name="userNameButton" 
+            Text="Click here to enter username"/>
+  </StackLayout>
+  
+</ContentPage>
