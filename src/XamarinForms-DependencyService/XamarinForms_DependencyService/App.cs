@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 
 using Xamarin.Forms;
+using XamarinForms_DependencyService.View;
 
 namespace XamarinForms_DependencyService
 {
@@ -16,7 +17,7 @@ namespace XamarinForms_DependencyService
         {
             // The root page of your application
 
-            var mainPage =  new NavigationPage(new HomePage());
+            var mainPage =  new NavigationPage(new NetworkConnectivityPage());
             Navigation = mainPage.Navigation;
             MainPage = mainPage;
         }
